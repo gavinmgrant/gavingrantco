@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { EmailIcon } from '../public/EmailIcon'
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         <meta name="description" content="Web Design and Development Services" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.gif" />
       </Head>
 
       <main className={styles.main}>
@@ -23,6 +24,9 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
+        <a href="mailto:gavin@gavingrant.co">
+          <EmailIcon />
+        </a>
         <p>
           © 2021 Gavin Grant Consulting
         </p>
