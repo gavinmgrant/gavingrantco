@@ -1,10 +1,9 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { EmailIcon } from '../public/EmailIcon'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className='container'>
       <Head>
         <title>Gavin Grant Consulting</title>
         <meta name="description" content="Web Design and Development Services" />
@@ -13,24 +12,18 @@ export default function Home() {
         <link rel="icon" href="/icon.gif" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main className='main'>
+        <h1 className='title'>
           Gavin Grant Consulting
         </h1>
 
-        <p className={styles.description}>
+        <p className='description'>
           Web Design and Development Services
         </p>
+        <Link href='/projects'>
+          <button>View Projects</button>
+        </Link>
       </main>
-
-      <footer className={styles.footer}>
-        <a href="mailto:gavin@gavingrant.co">
-          <EmailIcon />
-        </a>
-        <p>
-          © 2021 Gavin Grant Consulting
-        </p>
-      </footer>
     </div>
   )
 }
