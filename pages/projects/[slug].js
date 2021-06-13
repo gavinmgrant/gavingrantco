@@ -20,7 +20,7 @@ export default function Projects() {
   )
 
   if (error) return <div className='container'>{error.message}</div>
-  if (!data) return <div className='container'>Loading...</div>
+  if (!data) return <div className='container'>Loading project...</div>
 
   return (
     <div className='container'>
@@ -60,6 +60,15 @@ export default function Projects() {
             return <li>{tech}</li>
           })}
         </ul>
+        {data.github !== null && (
+          <div className='details-button'>
+            <button>
+              <a href={data.github} target='_blank'>
+                GitHub Repo
+              </a>
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )

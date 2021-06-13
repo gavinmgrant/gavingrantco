@@ -33,7 +33,7 @@ export const projects = [
     imgsrc: '/images/project_permitful.jpg',
     mobilesrc: '/images/project_permitful_mobile.jpg',
     github: 'https://github.com/gavinmgrant/permitful-client',
-    description: 'This full-stack web application is a rental property calculator that allows users to save, update, and delete property investment reports.',
+    description: 'This full-stack web application allows users to visualize where all of the most recently updated building permits in a specific jurisdiction are located and save their favorites.',
     bullets: [ 
       'Implemented a responsive client using JavaScript and React.js library that passes data to components via context and state.',
       'Architected RESTful API endpoints using Node.js/Express routers to perform CRUD operations POST, GET, PATCH, AND DELETE.',
@@ -60,7 +60,7 @@ export const projects = [
     imgsrc: '/images/project_cadre.jpg',
     mobilesrc: '/images/project_cadre_mobile.jpg',
     github: null,
-    description: 'This is website was designed for Seattle-based general contractor Cadre General Contractors',
+    description: 'This is website was designed for Seattle-based general contractor Cadre General Contractors to showcase their work and services.',
     bullets: [ 
       'Integrated the website into the WordPress content management system.',
       'Leveraged the Salient WordPress theme to create a responsive user experience.',
