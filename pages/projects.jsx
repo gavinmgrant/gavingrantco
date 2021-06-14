@@ -7,7 +7,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 export default function Projects() {
   const { data, error } = useSWR('/api/projects', fetcher)
 
-  if (error) return <div className='container'>Failed to load project.</div>
+  if (error) return <div className='container'>Failed to load projects.</div>
   if (!data) return <div className='container'>Loading projects...</div>
 
   return (

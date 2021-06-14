@@ -8,7 +8,7 @@ body {
   background-color: #ffdf6c;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: 'Sen', sans-serif;
 }
 
@@ -23,11 +23,15 @@ ul {
   list-style-type: none;
 }
 
+li {
+  margin: 0.4rem 0;
+}
+
 button {
   border: 1px solid #202020;
   border-radius: 100px;
   font-family: 'Roboto Condensed', sans-serif;
-  padding: 1rem;
+  padding: 1.25rem;
   background: none;
   font-size: 1.25rem;
   cursor: pointer;
@@ -37,9 +41,14 @@ img {
   border-radius: 10px;
 }
 
+.button-home {
+  border: 1px solid #ffdf6c;
+  color: #ffdf6c;
+}
+
 .container {
   margin: 1rem auto;
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 5rem);
   padding: 0 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
@@ -68,7 +77,6 @@ img {
 }
 
 .header h3 {
-  font-family: 'Sen', sans-serif;
   cursor: pointer;
 }
 
@@ -113,11 +121,6 @@ img {
   text-align: center;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.25rem;
-}
-
 .grid {
   display: flex;
   align-items: center;
@@ -128,7 +131,7 @@ img {
 }
 
 .card {
-  margin: 1rem;
+  margin: 1rem 0;
   flex-basis: 45%;
   padding: 1.5rem;
   text-align: left;
@@ -142,8 +145,8 @@ img {
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #6c8cff;
+  border-color: #6c6cff;
   cursor: pointer;
 }
 
@@ -205,6 +208,11 @@ img {
 
   .title {
     font-size: 3rem;
+  }
+
+  .description {
+    line-height: 1.5;
+    font-size: 1.25rem;
   }
 
   .projectimage {
