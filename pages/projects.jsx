@@ -21,8 +21,7 @@ export default function Projects() {
       </Head>
 
       <main className='main'>
-        <h1>Projects</h1>
-        <ul>
+        <ul className='card-container'>
           {data.map(project => {
             return (
               <div className='card' key={project.id}>
