@@ -40,6 +40,14 @@ button {
 
 img {
   border-radius: 10px;
+  filter: grayscale(1);
+  transition: filter 0.5s ease;
+}
+
+img:hover,
+img:focus,
+img:active {
+  filter: grayscale(0);
 }
 
 .container {
@@ -64,6 +72,12 @@ img {
   color: #202020;
   background-color: #ffdf6c;
   height: 100vh;
+}
+
+.landing h1,
+.landing p {
+  margin: 0;
+  padding: 1rem;
 }
 
 .header {
@@ -101,7 +115,7 @@ img {
 }
 
 .title a {
-  color: #0070f3;
+  color: #6c6cff;
   text-decoration: none;
 }
 

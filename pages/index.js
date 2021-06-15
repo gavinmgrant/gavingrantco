@@ -6,7 +6,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 export default function Home() {
   const props = useSpring({ 
     to: { filter: 'blur(0)' }, 
-    from: { filter: 'blur(3rem)' },
+    from: { filter: 'blur(1rem)' },
     config: { duration: 1000 }, 
   })
 

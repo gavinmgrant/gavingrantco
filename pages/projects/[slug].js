@@ -33,7 +33,6 @@ export default function Projects() {
             height={600}
             quality={100}
             layout='intrinsic'
-            placeholder='blur'
           />
         </div>
         <div className='projectimagemobile'>
@@ -44,7 +43,6 @@ export default function Projects() {
             height={858}
             quality={100}
             layout='intrinsic'
-            placeholder='blur'
           />
         </div>
       </a>
