@@ -25,14 +25,14 @@ export default function Home() {
           offset={0}
           speed={2.5}
           style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <animated.main className='main' style={props}>
-              <h1 className='title'>
+          <main className='main landing'>
+              <animated.h1 className='title' style={props}>
                 Gavin Grant Consulting
-              </h1>
-              <p className='description'>
+              </animated.h1>
+              <animated.p className='description' style={props}>
                 Web Design and Development Services
-              </p>
-            </animated.main>
+              </animated.p>
+            </main>
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#202020' }} />
@@ -46,7 +46,7 @@ export default function Home() {
             alignItems: 'center',
           }}>
           <Link href='/projects'>
-            <button className='button-home'>View Projects</button>
+            <button>View Projects</button>
           </Link>
         </ParallaxLayer>  
       </Parallax>
