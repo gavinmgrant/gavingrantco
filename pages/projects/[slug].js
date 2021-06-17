@@ -50,14 +50,14 @@ export default function Projects() {
         <h1>{data.name}</h1>
         <p>{data.description}</p>
         <ul>
-          {data.bullets.map(bullet => {
-            return <li>{bullet}</li>
+          {data.bullets.map((bullet, i) => {
+            return <li key={i}>{bullet}</li>
           })}
         </ul>
         <h3>Technology</h3>
         <ul>
-          {data.technologies.map(tech => {
-            return <li>{tech}</li>
+          {data.technologies.map((tech, i) => {
+            return <li key={i}>{tech}</li>
           })}
         </ul>
         {data.github !== null && (

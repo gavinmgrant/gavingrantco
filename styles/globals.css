@@ -151,9 +151,7 @@ img:active {
 }
 
 .card-container {
-  scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
+  margin: 0;
 }
 
 .card {
@@ -168,7 +166,6 @@ img:active {
   border-radius: 10px;
   transition: color 0.3s ease, border-color 0.3s ease;
   height: calc(100vh - 18rem);
-  scroll-snap-align: start;
 }
 
 .card:hover,

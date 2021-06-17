@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 export default function Home() {
-  const props = useSpring({ 
+  const titleProps = useSpring({ 
     to: { filter: 'blur(0)' }, 
     from: { filter: 'blur(0.75rem)' },
     config: { duration: 1000 }, 
@@ -15,7 +15,15 @@ export default function Home() {
     to: { opacity: '1' }, 
     from: { opacity: '0' },
     delay: 1500,
-    config: { duration: 1000 },  
+    config: { duration: 2000 },  
+  })
+
+  const bounceProps = useSpring({
+    loop: { reverse: true },
+    to: { y: 10 },
+    from: { y: 0 },
+    delay: 0,
+    config: { friction: 20, mass: 2 },
   })
 
   return (
@@ -34,14 +42,16 @@ export default function Home() {
           speed={2.5}
           style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <main className='main landing'>
-            <animated.h1 className='title' style={props}>
+            <animated.h1 className='title' style={titleProps}>
               Gavin Grant Consulting
             </animated.h1>
-            <animated.p className='description' style={props}>
+            <animated.p className='description' style={titleProps}>
               Web Design and Development Services
             </animated.p>
             <animated.div className='down-arrow' style={arrowProps}>
-              <DownArrow />
+              <animated.div style={bounceProps}>
+                <DownArrow />
+              </animated.div>
             </animated.div>
           </main>
         </ParallaxLayer>
