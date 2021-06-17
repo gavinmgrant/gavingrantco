@@ -1,6 +1,5 @@
 export const projects = [
-  { id: '1',
-    name: 'SoundlyInvest',
+  { name: 'SoundlyInvest',
     slug: 'soundlyinvest',
     url: 'https://soundlyinvest.com/',
     imgsrc: '/images/project_soundlyinvest.jpg',
@@ -26,8 +25,7 @@ export const projects = [
       'RESTful APIs'
     ]
   },
-  { id: '2',
-    name: 'Permitful',
+  { name: 'Permitful',
     slug: 'permitful',
     url: 'https://permitful.com/',
     imgsrc: '/images/project_permitful.jpg',
@@ -53,8 +51,7 @@ export const projects = [
       'RESTful APIs'
     ]
   },
-  { id: '3',
-    name: 'Cadre General Contractors',
+  { name: 'Cadre General Contractors',
     slug: 'cadre',
     url: 'https://cadregeneralcontractors.com/',
     imgsrc: '/images/project_cadre.jpg',
@@ -71,8 +68,7 @@ export const projects = [
       'WordPress'
     ]
   },
-  { id: '4',
-    name: 'Name This City',
+  { name: 'Name This City',
     slug: 'name-this-city',
     url: 'https://gavinmgrant.github.io/quiz-app/',
     imgsrc: '/images/project_name-this-city.jpg',
@@ -92,8 +88,7 @@ export const projects = [
       'jQuery', 
     ]
   },
-  { id: '5',
-    name: 'Happy Hour Helper',
+  { name: 'Happy Hour Helper',
     slug: 'happy-hour-helper',
     url: 'https://gavinmgrant.github.io/happy-hour-helper/',
     imgsrc: '/images/project_happy-hour-helper.jpg',
