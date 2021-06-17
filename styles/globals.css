@@ -92,13 +92,28 @@ img:active {
   top: 0;
   height: 70px;
   border-bottom: 1px solid #ffdf6c;
-  display: flex;
-  justify-content: center;
   background-color: #202020;
 }
 
-.header h3 {
+.header-links {
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+  margin: 0 auto;
+}
+
+.header-links h3,
+.header-links p {
   cursor: pointer;
+}
+
+.header-links h3 {
+  margin-left: 1rem;
+}
+
+.header-links p {
+  margin-right: 1rem;
+  padding-top: 5px;
 }
 
 .footer {
@@ -213,21 +228,22 @@ img:active {
   padding: 0 0 0 2rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 832px) {
   .card {
     padding: 5rem;
   }
 
-  .container {
+  .container,
+  .header-links {
     max-width: 800px;
   }
 
-  .header {
-    justify-content: flex-start;
+  .header-links h3 {
+    margin-left: 0;
   }
-
-  .header h3 {
-    margin-left: 1rem;
+  
+  .header-links p {
+    margin-right: 0;
   }
 
   .grid {

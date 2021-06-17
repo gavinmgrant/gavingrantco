@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import useSWR from 'swr'
+import Head from 'next/head'
 
 const fetcher = async (url) => {
   const res = await fetch(url)
@@ -24,6 +25,11 @@ export default function Projects() {
 
   return (
     <div className='container'>
+      <Head>
+        <title>Gavin Grant Consulting | {data.name}</title>
+        <meta name="description" content={data.description} />
+      </Head>
+
       <a href={data.url} target='_blank'>
         <div className='projectimage'>
           <Image
