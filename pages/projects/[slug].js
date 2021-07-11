@@ -24,7 +24,7 @@ export default function Projects() {
   if (!data) return <div className='container'>Loading project...</div>
 
   return (
-    <div className='container'>
+    <div className='project-container'>
       <Head>
         <title>Gavin Grant Consulting | {data.name}</title>
         <meta name="description" content={data.description} />

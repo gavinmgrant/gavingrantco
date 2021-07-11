@@ -51,9 +51,17 @@ img:active {
 }
 
 .container {
+  margin: 0 auto;
+  padding: 0 1rem 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-container {
   margin: 1rem auto;
-  min-height: calc(100vh - 5rem);
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,10 +126,15 @@ img:active {
 
 .footer {
   height: 70px;
+  width: 100vw;
   border-top: 1px solid #ffdf6c;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #202020;
 }
 
 .footer a {
@@ -167,10 +180,13 @@ img:active {
 
 .card-container {
   margin: 0;
+  scroll-snap-type: y proximity;
+  height: calc(100vh - 140px);
+  overflow-y: scroll;
 }
 
 .card {
-  margin: 0 0 1rem;
+  margin: 1rem 0;
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -180,7 +196,8 @@ img:active {
   border: 1px solid #ffdf6c;
   border-radius: 10px;
   transition: color 0.3s ease, border-color 0.3s ease;
-  height: calc(100vh - 18rem);
+  height: 50vh;
+  scroll-snap-align: center;
 }
 
 .card:hover,

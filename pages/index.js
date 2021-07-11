@@ -8,13 +8,13 @@ export default function Home() {
   const titleProps = useSpring({ 
     to: { filter: 'blur(0)' }, 
     from: { filter: 'blur(0.75rem)' },
-    config: { duration: 1000 }, 
+    config: { duration: 500 }, 
   })
 
   const arrowProps = useSpring({
     to: { opacity: '1' }, 
     from: { opacity: '0' },
-    delay: 1500,
+    delay: 1000,
     config: { duration: 2000 },  
   })
 

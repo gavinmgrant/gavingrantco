@@ -1,31 +1,11 @@
-import React, { useEffect, createRef, useCallback } from 'react'
+import React from 'react'
 import useSWR from 'swr'
 import Head from 'next/head'
 import Link from 'next/link'
-import ScrollSnap from 'scroll-snap'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-const callback = () => console.log('snapped!')
-
 export default function Projects() {
-  const container = createRef()
-
-  const bindScrollSnap = useCallback(
-    () => {
-      const element = container.current
-      const snapElement = new ScrollSnap(element, {
-        snapDestinationY: '90%',
-      })
-
-      return snapElement
-    },
-    []
-  )
-  
-  useEffect(() => {
-    bindScrollSnap()    
-  }, [])
 
   const { data, error } = useSWR('/api/projects', fetcher)
 
@@ -43,7 +23,7 @@ export default function Projects() {
       </Head>
 
       <main className='main'>
-        <div className='card-container' ref={container}>
+        <div className='card-container'>
           {data.map((project, i) => {
             return (
               <div className='card' key={i}>
