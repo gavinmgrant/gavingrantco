@@ -68,6 +68,14 @@ img:active {
   align-items: center;
 }
 
+.loading {
+  height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main {
   flex: 1;
   display: flex;
@@ -169,6 +177,10 @@ img:active {
   text-align: center;
 }
 
+.description {
+  padding: 0 1rem 1rem 1rem !important;
+}
+
 .grid {
   display: flex;
   align-items: center;
@@ -251,6 +263,7 @@ img:active {
   }
 
   .container,
+  .project-container,
   .header-links {
     max-width: 800px;
   }

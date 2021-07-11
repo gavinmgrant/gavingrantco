@@ -1,19 +1,28 @@
-import React from 'react'
-import useSWR from 'swr'
-import Head from 'next/head'
-import Link from 'next/link'
+import React from "react";
+import useSWR from "swr";
+import Head from "next/head";
+import Link from "next/link";
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Projects() {
+  const { data, error } = useSWR("/api/projects", fetcher);
 
-  const { data, error } = useSWR('/api/projects', fetcher)
-
-  if (error) return <div className='container'>Failed to load projects.</div>
-  if (!data) return <div className='container'>Loading projects...</div>
+  if (error)
+    return (
+      <div className="loading">
+        <p>Failed to load projects.</p>
+      </div>
+    );
+  if (!data)
+    return (
+      <div className="loading">
+        <p>Loading projects...</p>
+      </div>
+    );
 
   return (
-    <div className='container'>
+    <div className="container">
       <Head>
         <title>Gavin Grant Consulting | Projects</title>
         <meta name="description" content="Projects" />
@@ -22,11 +31,11 @@ export default function Projects() {
         <link rel="icon" href="/icon.gif" />
       </Head>
 
-      <main className='main'>
-        <div className='card-container'>
+      <main className="main">
+        <div className="card-container">
           {data.map((project, i) => {
             return (
-              <div className='card' key={i}>
+              <div className="card" key={i}>
                 <Link href={`/projects/${encodeURIComponent(project.slug)}`}>
                   <div>
                     <h2>{project.name}</h2>
@@ -34,10 +43,10 @@ export default function Projects() {
                   </div>
                 </Link>
               </div>
-            )
+            );
           })}
         </div>
       </main>
     </div>
-  )
+  );
 }
