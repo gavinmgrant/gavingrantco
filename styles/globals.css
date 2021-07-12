@@ -40,14 +40,6 @@ button {
 
 img {
   border-radius: 10px;
-  filter: grayscale(1);
-  transition: filter 0.5s ease;
-}
-
-img:hover,
-img:focus,
-img:active {
-  filter: grayscale(0);
 }
 
 .container {
@@ -234,12 +226,23 @@ img:active {
   height: 1em;
 }
 
-.projectimage {
+.project-image {
   display: none;
 }
 
-.projectimagemobile {
+.project-image-mobile {
   display: block;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title h1,
+.project-title svg {
+  margin: 1rem 0;
 }
 
 .details {
@@ -291,11 +294,11 @@ img:active {
     font-size: 1.25rem;
   }
 
-  .projectimage {
+  .project-image {
     display: block;
   }
   
-  .projectimagemobile {
+  .project-image-mobile {
     display: none;
   }
 }

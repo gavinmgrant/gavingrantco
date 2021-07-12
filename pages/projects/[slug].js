@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import useSWR from "swr";
 import Head from "next/head";
+import { LinkIcon } from "../../public/LinkIcon";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -40,30 +41,33 @@ export default function Projects() {
         <meta name="description" content={data.description} />
       </Head>
 
-      <a href={data.url} target="_blank">
-        <div className="projectimage">
-          <Image
-            src={data.imgsrc}
-            alt="Screenshot"
-            width={900}
-            height={600}
-            quality={100}
-            layout="intrinsic"
-          />
-        </div>
-        <div className="projectimagemobile">
-          <Image
-            src={data.mobilesrc}
-            alt="Screenshot"
-            width={600}
-            height={858}
-            quality={100}
-            layout="intrinsic"
-          />
-        </div>
-      </a>
+      <div className="project-image">
+        <Image
+          src={data.imgsrc}
+          alt="Screenshot"
+          width={900}
+          height={600}
+          quality={100}
+          layout="intrinsic"
+        />
+      </div>
+      <div className="project-image-mobile">
+        <Image
+          src={data.mobilesrc}
+          alt="Screenshot"
+          width={600}
+          height={858}
+          quality={100}
+          layout="intrinsic"
+        />
+      </div>
       <div className="details">
-        <h1>{data.name}</h1>
+        <div className="project-title">
+          <h1>{data.name}</h1>
+          <a href={data.url} target="_blank">
+            <LinkIcon />
+          </a>
+        </div>
         <p>{data.description}</p>
         <ul>
           {data.bullets.map((bullet, i) => {
